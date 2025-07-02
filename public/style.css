@@ -1,0 +1,85 @@
+/* Page Base */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Headings */
+h1,
+h2 {
+  color: #0b5ed7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Chat List Container */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Individual Chat Card */
+.chat {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  transition: transform 0.2s ease;
+}
+
+.chat:hover {
+  transform: scale(1.01);
+}
+
+/* Message Bubble Inside the Card */
+.msg {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 16px;
+  margin: 15px 0;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+/* Metadata (From, To, Time) */
+.chat p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.chat i {
+  color: #555;
+  font-style: italic;
+}
+
+/* Buttons */
+button {
+  margin-right: 10px;
+  padding: 6px 14px;
+  border: none;
+  background-color: #ef6c00;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d84315;
+}
+
+/* Horizontal Line Between Chats */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0 5px 0;
+}
