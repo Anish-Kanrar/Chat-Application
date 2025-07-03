@@ -106,6 +106,9 @@ chat1.save().then((res) => {
 // app.get("/", (req, res) => {
 //     res.send("root is working");
 // })
+app.get("/", (req, res) => {
+  res.redirect("/chats");
+});
 
 
 const port = 8000;
