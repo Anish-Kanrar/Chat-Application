@@ -4,16 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit chats</title>
+    <style>
+      body {
+        background-color: #f4f7f8;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .edit-container {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px #d6790e;
+        width: 400px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff3d00;
+        margin-bottom: 20px;
+      }
+
+      .chat-info {
+        color: #1c0dec;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+        color: #1b2aca;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        resize: vertical;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #ff3d00;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #e53900;
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    </style>
   </head>
   <body>
-    <p>Edit your chat: <%= chat._id %></p>
-    <p>
-      This chat was sent from <b><%= chat.from %></b> to <b><%= chat.to%></b>
-    </p>
-    <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
-      <textarea name="msg" rows="6" cols="50"><%= chat.msg %></textarea>
-      <br />
-      <button>Edit</button>
-    </form>
+    <div class="edit-container">
+      <h1>Update Chat</h1>
+      <p class="chat-info">Chat ID: <code><%= chat._id %></code></p>
+      <p class="chat-info">
+        From <b><%= chat.from %></b> to <b><%= chat.to %></b>
+      </p>
+      <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+        <label for="msg">Message</label>
+        <textarea name="msg" id="msg" rows="6"><%= chat.msg %></textarea>
+        <button type="submit">Update Message</button>
+      </form>
+    </div>
   </body>
 </html>

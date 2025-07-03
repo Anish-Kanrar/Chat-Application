@@ -9,5 +9,4 @@ node_modules/
 Thumbs.db
 *.log
 
-# Optional: VS Code settings (if not needed)
-.vscode/
+

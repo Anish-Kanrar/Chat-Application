@@ -29,7 +29,6 @@ app.get("/chats", async (req, res) => {
     res.render("index", { chats })
 })
 
-
 //New Route
 app.get("/chats/new", (req, res) => {
     res.render("new");
@@ -111,5 +110,4 @@ app.get("/", (req, res) => {
 const port = 8000;
 app.listen(port, () => {
     console.log("Server is listing on port 8000");
-
 })
