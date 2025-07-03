@@ -19,7 +19,7 @@ main().then(() => {
     .catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp');
+    await mongoose.connect('mongodb+srv://test:LPnGeO6Piue3OssG@test.w9dl7xz.mongodb.net/?retryWrites=true&w=majority&appName=test');
 }
 
 // Index Route
@@ -107,11 +107,11 @@ chat1.save().then((res) => {
 //     res.send("root is working");
 // })
 app.get("/", (req, res) => {
-  res.redirect("/chats");
+    res.redirect("/chats");
 });
 
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
     console.log("Server is listing on port 8000");
 })
