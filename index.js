@@ -102,9 +102,10 @@ chat1.save().then((res) => {
     console.log(res);
 });
 */
-app.get("/", (req, res) => {
-    res.send("root is working");
-})
+
+// app.get("/", (req, res) => {
+//     res.send("root is working");
+// })
 
 
 const port = 8000;
