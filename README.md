@@ -1,66 +1,76 @@
 # 💬 Mini Chat App
 
-A simple Node.js + Express + MongoDB-based mini WhatsApp-like chat application where users can create, view, edit, and delete messages.
+A simple WhatsApp-like chat application built with **Node.js**, **Express**, and **MongoDB**. Users can create, view, edit, and delete chat messages in a clean interface powered by **EJS** and styled using **CSS**.
 
 ---
 
 ## 🚀 Features
 
-- Create new chat messages 📝  
-- View all messages in a clean UI 💬  
-- Edit or delete existing messages ✏️🗑️  
-- Styled with CSS and served via EJS templates 🎨  
+- 📝 Create new chat messages  
+- 💬 View all messages in a responsive UI  
+- ✏️ Edit existing messages  
+- 🗑️ Delete unwanted messages  
+- 🎨 UI styled with CSS and rendered using EJS
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Backend**: Node.js, Express.js  
-- **Database**: MongoDB (via Mongoose)  
-- **Templating**: EJS  
-- **Styling**: CSS  
+- **Database**: MongoDB (Mongoose)  
+- **Templating Engine**: EJS  
+- **Styling**: CSS
 
 ---
 
 ## 📁 Folder Structure
 
-mini-whatsapp-chat/
+mini-chat-app/
 │
 ├── models/ # Mongoose schema
-├── public/ # Static CSS files
+│ └── chat.js
+│
+├── public/ # Static assets (CSS)
 │ └── style.css
+│
 ├── views/ # EJS templates
 │ ├── index.ejs
 │ ├── new.ejs
 │ └── edit.ejs
-├── index.js # Main Express server
-├── package.json
-└── README.md # This file
-
+│
+├── index.js # Main Express server file
+├── package.json # Project metadata and dependencies
+└── README.md # Project documentation
 
 ---
 
-## ▶️ How to Run Locally
+## ▶️ Getting Started (Run Locally)
+
+### Prerequisites:
+- Node.js installed
+- MongoDB running locally or via cloud (e.g., MongoDB Atlas)
+
+### Steps:
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/your-username/mini-whatsapp-chat.git
-cd mini-whatsapp-chat
+# 1. Clone the repository
+git clone https://github.com/Anish-Kanrar/Chat-Application.git
+cd Chat-Application
 
 # 2. Install dependencies
 npm install
 
-# 3. Start MongoDB (if not already running)
-# e.g. for local MongoDB: mongod
+# 3. Start MongoDB server (if local)
+mongod
 
 # 4. Run the server
 node index.js
-# or with nodemon
-nodemon index.js
+# or with nodemon (for auto-restart on changes)
+npx nodemon index.js
 
-# App runs on: http://localhost:8000
+Open your browser and visit:
+👉 http://localhost:8000
 
 👤 Author
 Anish Kanrar
-GitHub Profile
-
+🔗 GitHub Profile
