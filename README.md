@@ -1,4 +1,4 @@
-# 💬 Mini WhatsApp Chat App
+# 💬 Mini Chat App
 
 A simple Node.js + Express + MongoDB-based mini WhatsApp-like chat application where users can create, view, edit, and delete messages.
 
