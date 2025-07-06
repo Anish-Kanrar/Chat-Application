@@ -7,6 +7,7 @@ const methodOverride = require("method-override");
 const { METHODS } = require("http");
 // const { log } = require("console");
 
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
